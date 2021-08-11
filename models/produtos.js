@@ -22,3 +22,5 @@ const Produto = database.define('produtos',{
     }
     
 });
+
+module.exports = Produto
