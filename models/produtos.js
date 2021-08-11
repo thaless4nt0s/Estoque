@@ -7,5 +7,18 @@ const Produto = database.define('produtos',{
         autoIncrement: true,
         primaryKey: true,
         allowNull: false
+    },
+    nome: {
+        type: Sequelize.STRING,
+        allowNull: true
+    },
+    preco:{
+        type: Sequelize.FLOAT,
+        allowNull: false
+    },
+    descricao:{
+        type: Sequelize.STRING,
+        allowNull: false
     }
+    
 });
