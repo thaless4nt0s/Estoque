@@ -1,0 +1,26 @@
+{
+  "name": "estoque",
+  "version": "1.0.0",
+  "description": "Criação de um estoque usando JS com MySQL, tentando aprender a usar o sequelize",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "run": "nodemon"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thaless4nt0s/Estoque.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thaless4nt0s/Estoque/issues"
+  },
+  "homepage": "https://github.com/thaless4nt0s/Estoque#readme",
+  "dependencies": {
+    "mysql2": "^2.3.0",
+    "nodemon": "^2.0.12",
+    "sequelize": "^6.6.5"
+  }
+}
