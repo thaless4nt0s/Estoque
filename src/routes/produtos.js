@@ -28,6 +28,15 @@ router.post("/", async (req, res) => {
     }
 })
 
-
+router.delete("/:id", async (req, res) => {
+    try {
+        await database.sync()
+        const productToDelete = await Produto.findByPk(req.params.id)
+        productToDelete.destroy()
+        res.status(200).json("ok")
+    } catch (err) {
+        res.status(422).json(err)
+    }
+})
 
 module.exports = router
