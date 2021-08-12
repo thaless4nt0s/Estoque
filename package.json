@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/thaless4nt0s/Estoque#readme",
   "dependencies": {
+    "express": "^4.17.1",
     "mysql2": "^2.3.0",
     "nodemon": "^2.0.12",
     "sequelize": "^6.6.5"
