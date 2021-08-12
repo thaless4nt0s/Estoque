@@ -22,6 +22,7 @@ router.post("/", async (req, res) => {
             preco: preco,
             descricao: descricao
         })
+
         res.status(200).json(create)
     } catch (err) {
         res.status(402).json(err)
@@ -35,6 +36,22 @@ router.delete("/:id", async (req, res) => {
         productToDelete.destroy()
         res.status(200).json("ok")
     } catch (err) {
+        res.status(422).json(err)
+    }
+})
+
+router.put("/:id", async (req, res) =>{
+    let { nome, preco, descricao } = req.body
+    try{
+        await database.sync()
+        const productToUpdate = await Produto.findByPk(req.params.id)        
+        productToUpdate.nome = nome
+        productToUpdate.preco = preco
+        productToUpdate.descricao = descricao
+        productToUpdate.save()
+        res.status(200).json(productToUpdate)
+
+    }catch(err){
         res.status(422).json(err)
     }
 })
